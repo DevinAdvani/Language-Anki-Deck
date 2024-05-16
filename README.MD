@@ -1,0 +1,1 @@
+Making a Program that automatically makes Language Pronunciation Anki Flashcards
