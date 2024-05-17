@@ -1,34 +1,33 @@
-import genanki 
+import genanki
+import random
 
-class anki:
-    def __init__(self, name):
-        self.name = name
+my_deck = genanki.Deck(
+  random.randrange(1 << 30, 1 << 31),
+  'French Words')
 
-    def make_deck(self):
+my_model = genanki.Model(
+  random.randrange(1 << 30, 1 << 31),
+  'Audio of French Words',
+  fields=[
+    {'name': 'French Word'},
+    {'name': 'Audio File'},
+  ],
+  templates=[
+    {
+      'name': 'Card 1',
+      'qfmt': '{{French Word}}',
+      'afmt': '{{Audio File}}',
+    },
+  ])
 
-        my_model = genanki.Model(
-            1607392319,
-            'Simple Model',
-            fields=[
-                {'name': 'Question'},
-                {'name': 'Answer'},
-            ],
-            templates=[
-                {
-                'name': 'Card 1',
-                'qfmt': '{{Question}}',
-                'afmt': '{{FrontSide}}<hr id="answer">{{Answer}}',
-                },
-            ])
-        
-        my_note = genanki.Note(
-            model=my_model,
-            fields=['Capital of Argentina', 'Buenos Aires'])
-        
-        my_deck = genanki.Deck(
-        2059400110,
-        'Country Capitals')
+my_note = genanki.Note(
+  model=my_model,
+  fields=['et',"[sound:et.mp3]"])
 
-        my_deck.add_note(my_note)
 
-        genanki.Package(my_deck).write_to_file('output.apkg')
+my_deck.add_note(my_note)
+
+genanki.Package(my_deck).write_to_file('output.apkg')
+
+my_package = genanki.Package(my_deck)
+my_package.media_files = ['et.mp3']
