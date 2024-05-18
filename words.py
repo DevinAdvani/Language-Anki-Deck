@@ -2,8 +2,8 @@ from gtts import gTTS
 import os
 import genanki
 
-start = 100
-number_of_words = 100
+start = 0
+number_of_words = 5000
 end = start + number_of_words
 
 my_file = open("frequency.txt", "r", encoding = "utf-8")
@@ -47,5 +47,9 @@ filename = str(start) + "-" + str(end) + ".apkg"
 
 my_package.write_to_file(filename)
 
+
 for i in range(start,end):
-    os.remove(list[i] + ".mp3")
+    try:
+      os.remove(list[i] + ".mp3")
+    except:
+       pass
