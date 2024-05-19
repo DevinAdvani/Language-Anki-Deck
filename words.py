@@ -2,8 +2,8 @@ from gtts import gTTS
 import os
 import genanki
 
-start = 0
-number_of_words = 5000
+start = 4000
+number_of_words = 1000
 end = start + number_of_words
 
 my_file = open("frequency.txt", "r", encoding = "utf-8")
