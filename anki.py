@@ -2,11 +2,11 @@ from gtts import gTTS
 import os
 import genanki
 
-name = "The Little Prince"
-language = "fr"
+name = "Anne Frank's Diary"
+language = "du"
 make_audio = False
 
-filename = "The Little Prince.txt"
+filename = name + ".txt"
 
 my_file = open(filename, "r", encoding = "utf-8")
 data = my_file.read()
@@ -46,8 +46,8 @@ for i in range(0,len(english)):
     my_note = genanki.Note(
     model=my_model,    
     fields=[english[i], translation[i]])
-    print("ENGLISH: " + english[i])
-    print("FRENCH:  " + translation[i])
+    print("ENGLISH   : " + english[i])
+    print("TRANSLATED:  " + translation[i])
     print("")
 
     my_deck.add_note(my_note)

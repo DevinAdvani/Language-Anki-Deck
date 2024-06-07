@@ -1,1 +1,1 @@
-Making a Program that automatically makes Language Pronunciation Anki Flashcards
+Turning dual translation books into sentence flashcards and word pronunciation flashcards in anki.
