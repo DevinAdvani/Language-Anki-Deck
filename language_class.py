@@ -1,11 +1,12 @@
 from gtts import gTTS
 import os
 import genanki
+from main import *
 
 class language:
-  def __init__(self, name, language):
-    self.language = language
-    self.name = name
+  def __init__(self):
+    self.language = file_language
+    self.name = file_name
     self.filename = self.name + ".txt"
     self.english = []
     self.translation = []
