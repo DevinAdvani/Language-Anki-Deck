@@ -4,10 +4,11 @@ import genanki
 from main import *
 
 class language:
-  def __init__(self):
+  def __init__(self, number):
     self.language = file_language
+    self.number = number
     self.name = file_name
-    self.filename = self.name + ".txt"
+    self.filename = self.name + "/" + str(self.number) + ".txt"
     self.english = []
     self.translation = []
     self.sentence_list = []
@@ -31,7 +32,7 @@ class language:
   def make_my_genanki_deck(self):
     self.my_genanki_deck = genanki.Deck(
       2059400110,
-      "Languages::" + self.name + " Sentences")
+      "Languages::" + self.name + "::" + str(self.number))
     
   def make_my_genanki_model(self):
     self.my_genanki_model = genanki.Model(
@@ -73,7 +74,7 @@ class language:
     self.make_my_genanki_deck()
     self.make_my_genanki_model()
     self.add_cards_to_deck()
-    genanki.Package(self.my_genanki_deck).write_to_file(self.name + ' Sentences.apkg')
+    genanki.Package(self.my_genanki_deck).write_to_file("French/" + self.name + " " + str(self.number) +'.apkg')
 
 
 
