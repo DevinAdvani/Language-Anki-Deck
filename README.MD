@@ -4,5 +4,5 @@ Turning dual translation books into sentence flashcards and word pronunciation f
 # How to Use
 Type in
 ```bash
-python make_files
+python make_files.py
 ```
