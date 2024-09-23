@@ -3,7 +3,7 @@ import os
 #Make it so that multiword filenames work
 
 folder_name = input("FOLDER NAME: ")
-language = input("LANGUAGE: ")
+#language = input("LANGUAGE: ")
 edited_folder_name = ""
 for i in range(0,len(folder_name)):    
     if (folder_name[i] == " "):
@@ -19,6 +19,6 @@ try:
 except:
     print("FILE ALREADY EXISTS")
 try:
-    os.system("echo " + language + " > " + edited_folder_name + "_Translation/language" + ".txt")
+    pass#os.system("echo " + language + " > " + edited_folder_name + "_Translation/language" + ".txt")
 except:
     pass
