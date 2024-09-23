@@ -14,4 +14,4 @@ for i in range(0,len(folder_name)):
         edited_folder_name += folder_name[i]
 
 for i in range(int(file_number_start), int(file_number_end) + 1):
-    os.system("echo " + str(i) + " > " + edited_folder_name + "/Paragraph_" + str(i) + ".txt")
+    os.system("echo " + str(i) + " > " + edited_folder_name + "_Translation/Paragraph_" + str(i) + ".txt")

@@ -11,10 +11,14 @@ for i in range(0,len(folder_name)):
     else:
         edited_folder_name += folder_name[i]
 try:
-    os.mkdir(edited_folder_name)
+    os.mkdir(edited_folder_name + "_Translation")
 except:
     print("FILE ALREADY EXISTS")
 try:
-    os.system("echo " + language + " > " + edited_folder_name + "/language" + ".txt")
+    os.mkdir(edited_folder_name + "_Anki")
+except:
+    print("FILE ALREADY EXISTS")
+try:
+    os.system("echo " + language + " > " + edited_folder_name + "_Translation/language" + ".txt")
 except:
     pass

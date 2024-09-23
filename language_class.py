@@ -6,7 +6,7 @@ class language:
   def __init__(self, number):
     self.language = "Fr"
     self.number = number
-    self.name = "The_Stranger"
+    self.name = "The_Stranger_Translation"
     self.filename = self.name + "/Paragraph_" + str(self.number) + ".txt"
     self.english = []
     self.translation = []
@@ -73,7 +73,7 @@ class language:
     self.make_my_genanki_deck()
     self.make_my_genanki_model()
     self.add_cards_to_deck()
-    genanki.Package(self.my_genanki_deck).write_to_file("The_Stranger/" + self.name + " " + str(self.number) +'.apkg')
+    genanki.Package(self.my_genanki_deck).write_to_file("The_Stranger_Anki/" + self.name + " " + str(self.number) +'.apkg')
 
 
 
