@@ -1,14 +1,13 @@
 from gtts import gTTS
 import os
 import genanki
-from main import *
 
 class language:
   def __init__(self, number):
-    self.language = file_language
+    self.language = "Fr"
     self.number = number
-    self.name = file_name
-    self.filename = self.name + "/" + str(self.number) + ".txt"
+    self.name = "The_Stranger"
+    self.filename = self.name + "/Paragraph_" + str(self.number) + ".txt"
     self.english = []
     self.translation = []
     self.sentence_list = []
@@ -74,7 +73,7 @@ class language:
     self.make_my_genanki_deck()
     self.make_my_genanki_model()
     self.add_cards_to_deck()
-    genanki.Package(self.my_genanki_deck).write_to_file("French/" + self.name + " " + str(self.number) +'.apkg')
+    genanki.Package(self.my_genanki_deck).write_to_file("The_Stranger/" + self.name + " " + str(self.number) +'.apkg')
 
 
 

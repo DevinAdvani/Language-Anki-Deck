@@ -1,4 +1,4 @@
-# French-Anki-Deck
+# Language-Anki-Deck
 Turning dual translation books into sentence flashcards and word pronunciation flashcards in anki.
 
 # How to make a Folder 

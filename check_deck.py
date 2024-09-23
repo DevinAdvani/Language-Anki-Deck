@@ -1,5 +1,7 @@
 from language_class import language
-from main import file_name
 
-language_deck = language(2)
+folder = input("CHECK WHICH DECK: ")
+paragraph = input("CHECK WHICH PARAGRAPH: ")
+
+language_deck = language(int(paragraph))
 language_deck.check_deck_translations()

@@ -1,5 +1,4 @@
 import os
-from main import *
 
 #Make it so that multiword filenames work
 
