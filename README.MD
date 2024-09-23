@@ -14,4 +14,4 @@ Choose the Amount
 ```bash
 FILE AMOUNT: 100
 ```
-This will create a File with a number of empty text files in to copy and paste the translation
+This will create a file with the name "The_Stranger" and 100 files to write a translation into
